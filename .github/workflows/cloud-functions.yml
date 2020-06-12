@@ -22,13 +22,17 @@ jobs:
     # Setup gcloud CLI
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
-        version: '290.0.1'
+        version: '296.0.1'
         service_account_key: ${{ secrets.RUN_SA_KEY }}
         project_id: ${{ secrets.RUN_PROJECT }}
 
     # Deploy image to Cloud Run
-    - name: Info
-      run: gcloud info
-
-    - name: Info
-      run: gcloud auth list
+    - run: gcloud info
+    - run: gcloud auth list
+    - name: Deploy
+    - run: >-
+        gcloud functions deploy test-pub-sub
+        --region=europe-west2
+        --entry-point=hello_pubsub
+        --update-labels githubaction=$GITHUB_ACTION
+        --source=test-pub-sub
