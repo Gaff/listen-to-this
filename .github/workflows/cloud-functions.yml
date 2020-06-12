@@ -27,5 +27,8 @@ jobs:
         project_id: ${{ secrets.RUN_PROJECT }}
 
     # Deploy image to Cloud Run
-    - name: Deploy
-      run: gcloud auth list          
+    - name: Info
+      run: gcloud info
+
+    - name: Auth list
+      run: gcloud auth list      
