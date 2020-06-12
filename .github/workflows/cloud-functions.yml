@@ -37,4 +37,3 @@ jobs:
         --entry-point=hello_pubsub
         --update-labels githubaction=$GITHUB_ACTION
         --source=test-pub-sub
-        --service-account=github@${PROJECT_ID}.iam.gserviceaccount.com 
