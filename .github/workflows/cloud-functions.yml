@@ -29,7 +29,4 @@ jobs:
     # Deploy image to Cloud Run
     - name: Deploy
       run: |-
-        gcloud garbage deploy "$SERVICE_NAME" \
-          --quiet \
-          --region "$RUN_REGION" \
-          --image "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA" \          
+        gcloud auth list          
