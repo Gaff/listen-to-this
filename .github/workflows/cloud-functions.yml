@@ -28,7 +28,5 @@ jobs:
 
     # Deploy image to Cloud Run
     - name: Info
-      run: gcloud info
-
-    - name: Auth list
-      run: gcloud auth list      
+      run: |-
+        gcloud info
