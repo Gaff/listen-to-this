@@ -29,6 +29,7 @@ jobs:
     # Deploy image to Cloud Run
     - run: gcloud info
     - run: gcloud auth list
+    - run: find .
     - name: Deploy
     - run: >-
         gcloud functions deploy test-pub-sub
