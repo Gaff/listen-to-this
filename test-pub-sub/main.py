@@ -18,7 +18,7 @@ def hello_pubsub(event, context):
          event (dict): Event payload.
          context (google.cloud.functions.Context): Metadata for the event.
     """
-    print("From github!")
+    print("From github! 2")
     print("event: ", event)
     print("context: ", context)
 
