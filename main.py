@@ -13,7 +13,6 @@ SECRET_ID = 'test-scret'
 
 client = secretmanager.SecretManagerServiceClient()
 
-
 def hello_pubsub(event, context):
     """Triggered from a message on a Cloud Pub/Sub topic.
     Args:
