@@ -36,4 +36,4 @@ jobs:
         --region=europe-west2
         --entry-point=hello_pubsub
         --update-labels githubaction=$GITHUB_ACTION
-        --source=test-pub-sub
+        --source=.
