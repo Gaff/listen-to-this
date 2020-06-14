@@ -8,4 +8,3 @@ PROJECT_ID = 'listen-to-this-280113'
 SECRET_ID = 'test-scret'
 
 client = secretmanager.SecretManagerServiceClient()
-
