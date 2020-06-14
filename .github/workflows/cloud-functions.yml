@@ -15,7 +15,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -44,15 +43,21 @@ jobs:
     if: github.ref == 'refs/heads/master'
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
     # Deploy image to Cloud Run
-    - run: gcloud info
-    - run: gcloud auth list
-    - run: find .
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
         version: '296.0.1'
         service_account_key: ${{ secrets.RUN_SA_KEY }}
         project_id: ${{ secrets.RUN_PROJECT }}
+    - run: gcloud info
+    - run: gcloud auth list
+    - run: find .
     - name: Deploy
       run: >-
         gcloud functions deploy generateplaylist 
