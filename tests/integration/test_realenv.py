@@ -7,4 +7,4 @@ def test_noop():
 
 def test_env():
     env.setup_gcloud_json("allsecretsjson")
-    assert(env.get("testkey") == "testvalue")
+    assert(env.get("id") == "allsecretsjson")
