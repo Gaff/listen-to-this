@@ -1,4 +1,4 @@
-name: Build and Deploy to Cloud Functions
+name: Integration and Deploy to Cloud Functions
 
 on: [push]
 

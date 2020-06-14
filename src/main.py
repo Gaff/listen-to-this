@@ -1,10 +1,16 @@
-from google.cloud import secretmanager
-#from listentothis import env
+def generateplaylist(request):
+    """Responds to any HTTP request.
+    Args:
+        request (flask.Request): HTTP request object.
+    Returns:
+        The response text or any set of values that can be turned into a
+        Response object using
+        `make_response <http://flask.pocoo.org/docs/1.0/api/#flask.Flask.make_response>`.
+    """
+    request_json = request.get_json()
+    if request.args and 'message' in request.args:
+        return request.args.get('message')
+    if request_json and 'message' in request_json:
+        return request_json['message']
 
-# GCP project in which to store secrets in Secret Manager.
-PROJECT_ID = 'listen-to-this-280113'
-
-# ID of the secret to create.
-SECRET_ID = 'test-scret'
-
-client = secretmanager.SecretManagerServiceClient()
+    return f'Hello World!. ${request}'
