@@ -33,7 +33,7 @@ class Env:
 
         self.fetcher = fetcher
 
-    def setup_glloud_json(self, secret_name: str):
+    def setup_gcloud_json(self, secret_name: str):
         self.mode = Mode.GCLOUD_JSON
         client = secretmanager.SecretManagerServiceClient()
         _credentials, project = google.auth.default()
