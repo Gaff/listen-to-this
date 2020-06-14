@@ -1,5 +1,11 @@
-"""Just enough testing to prove pytest works"""
 import pytest
+from listentothis import env
+
 
 def test_noop():
     assert True
+
+def test_env():
+    env.setupJson("tests/jsonfile.json")
+
+    assert(env.get("testkey") == "testvalue")

@@ -32,8 +32,18 @@ jobs:
     - run: find .
     - name: Deploy
       run: >-
-        gcloud functions deploy test-pub-sub
+        gcloud functions deploy generateplaylist 
         --region=europe-west2
-        --entry-point=hello_pubsub
+        --entry-point=generateplaylist 
         --update-labels githubaction=$GITHUB_ACTION
-        --source=.
+        --source=src/
+
+    # - name: Deploy
+    #   run: >-
+    #     gcloud functions deploy test-pub-sub
+    #     --region=europe-west2
+    #     --entry-point=hello_pubsub
+    #     --update-labels githubaction=$GITHUB_ACTION
+    #     --source=src/
+        
+    
