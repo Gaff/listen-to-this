@@ -1,4 +1,6 @@
 #!include:.gitignore
+.gcloudignore
+.gitignore
 .git/**
 .github/**
 LICENSE

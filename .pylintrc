@@ -1,0 +1,7 @@
+[MASTER]
+# I'm an ass. https://stackoverflow.com/questions/7877522/how-do-i-disable-missing-docstring-warnings-at-a-file-level-in-pylint
+disable=C0114, C0115, C0116
+
+[FORMAT]
+max-line-length=120
+
