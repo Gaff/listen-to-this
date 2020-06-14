@@ -6,6 +6,6 @@ def test_noop():
     assert True
 
 def test_env():
-    env.setupJson("tests/jsonfile.json")
+    env.setup_json("tests/jsonfile.json")
 
     assert(env.get("testkey") == "testvalue")

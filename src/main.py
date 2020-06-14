@@ -1,5 +1,5 @@
 from google.cloud import secretmanager
-from listentothis import env
+#from listentothis import env
 
 # GCP project in which to store secrets in Secret Manager.
 PROJECT_ID = 'listen-to-this-280113'
