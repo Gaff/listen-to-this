@@ -37,7 +37,7 @@ jobs:
     needs: integration-test
     if: github.ref == 'refs/heads/master'
 
-    setps:
+    steps:
     # Deploy image to Cloud Run
     - run: gcloud info
     - run: gcloud auth list
