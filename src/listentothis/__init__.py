@@ -1,5 +1,2 @@
-from . import environment
-from . import listen_to_this
-
-env = environment.env
-ListenToThis = listen_to_this.ListenToThis
+from .environment import env
+from .external import Reddit

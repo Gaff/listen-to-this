@@ -1,10 +1,13 @@
 import pytest
-from listentothis import env, listen_to_this
+from listentothis import env, Reddit
 
 
-def test_env():
-    env.setup_gcloud_json("allsecretsjson")
-    assert env.get("id") == "allsecretsjson"
+
+env.setup_gcloud_json("allsecretsjson")
+assert env.get("id") == "allsecretsjson"
 
 def test_listentothis():
-    ltt = listen_to_this.ListenToThis()
+    ltt = Reddit()
+    data = ltt.query_reddit()
+    data = list(data)
+    assert len(data) > 50

@@ -11,7 +11,7 @@ class Mode(Enum):
     GCLOUD_JSON = 3
 
 
-def default_fetcher(secret: str):
+def default_fetcher(_, secret: str):
     raise Exception("Env not setup, cannot load secret" + secret)
 
 
