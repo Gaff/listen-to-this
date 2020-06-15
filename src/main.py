@@ -17,4 +17,4 @@ def generateplaylist(request):
     if request_json and 'message' in request_json:
         return request_json['message']
 
-    return f'Hello World!. ${request}'
+    return f'Hello World!. ${request_json}'
