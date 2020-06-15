@@ -1,3 +1,7 @@
+from listentothis import env
+
+env.setup_gcloud_json('allsecretsjson')
+
 def generateplaylist(request):
     """Responds to any HTTP request.
     Args:
