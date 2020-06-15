@@ -64,3 +64,6 @@ class Env:
             return payload
 
         self.fetcher = fetcher
+
+
+env = Env()
